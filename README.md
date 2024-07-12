@@ -12,6 +12,11 @@ bash docker-ce.sh
 
 >把 `ipv6.site.com` 解析(AAAA记录)到 服务器的 `ipv6` 地址
 
+## 部署
+```
+docker compose up -d
+```
+
 ## 总结
 如果你有ipv4环境 访问 `ipv4.site.com` 成功
 
