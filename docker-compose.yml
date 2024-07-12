@@ -1,0 +1,15 @@
+services:
+    1.25-alpine:
+        build: .
+        hostname: nginxHost
+        # 映射端口 【宿主机端口:容器端口】
+        ports:
+            - "80:80"
+            - "443:443"
+        # 容器名称
+        container_name: ipv6_test
+        restart: always
+        # 相当于 docker run -i
+        stdin_open: true
+        # 相当于 docker run -t
+        tty: true
