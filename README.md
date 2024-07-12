@@ -1,8 +1,9 @@
 # 快速安装 nginx 进行 ipv4 和 ipv6 测试
 
->如果没有安装 docker 先安装
+## 把项目下载到本地并进入目录
 ```
-bash docker-ce.sh
+git clone https://github.com/wenyamu/ipv6_test.git
+cd ipv6_test
 ```
 
 ## 修改配置文件
@@ -15,7 +16,9 @@ bash docker-ce.sh
 >把 `ipv6.site.com` 解析(AAAA记录)到 服务器的 `ipv6` 地址
 
 ## 部署
+>如果没有安装 docker 先安装 `bash docker-ce.sh`
 ```
+cd ipv6_test
 docker compose up -d
 ```
 
