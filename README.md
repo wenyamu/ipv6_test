@@ -23,8 +23,9 @@ docker compose up -d
 ```
 
 ## 总结
-如果你有`ipv4`环境 访问 `ipv4.site.com` 成功
-如果你有`ipv6`环境 访问 `ipv6.site.com` 成功
+>如果你有`ipv4`环境 访问 `ipv4.site.com` 成功
+>
+>如果你有`ipv6`环境 访问 `ipv6.site.com` 成功
 
 或者在终端中使用`curl`
 > 在没有 `ipv6` 的服务器中是这样的
