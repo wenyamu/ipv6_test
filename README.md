@@ -16,18 +16,18 @@ cd ipv6_test
 >把 `ipv6.site.com` 解析(AAAA记录)到 服务器的 `ipv6` 地址
 
 ## 部署
->如果没有安装 docker 先安装 `bash docker-ce.sh`
+>如果没有安装 `docker` 先安装 `bash docker-ce.sh`
 ```
 cd ipv6_test
 docker compose up -d
 ```
 
 ## 总结
-如果你有ipv4环境 访问 `ipv4.site.com` 成功
-如果你有ipv6环境 访问 `ipv6.site.com` 成功
+如果你有`ipv4`环境 访问 `ipv4.site.com` 成功
+如果你有`ipv6`环境 访问 `ipv6.site.com` 成功
 
-或者在终端中使用curl
-> 在没有 ipv6 的服务器中是这样的
+或者在终端中使用`curl`
+> 在没有 `ipv6` 的服务器中是这样的
 ```
 root@localhost:~# curl ipv4.890.im
 This is ipv4 site.
