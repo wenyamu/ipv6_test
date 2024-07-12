@@ -24,8 +24,15 @@ docker compose up -d
 
 ## 总结
 如果你有ipv4环境 访问 `ipv4.site.com` 成功
-
 如果你有ipv6环境 访问 `ipv6.site.com` 成功
 
-
+或者在终端中使用curl
+> 在没有 ipv6 的服务器中是这样的
+```
+root@localhost:~# curl ipv4.890.im
+This is ipv4 site.
+root@localhost:~# curl ipv6.890.im
+curl: (7) Couldn't connect to server
+root@localhost:~# 
+```
 
