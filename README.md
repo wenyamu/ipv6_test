@@ -1,11 +1,12 @@
-快速安装 nginx 进行 ipv4 和 ipv6 测试
+# 快速安装 nginx 进行 ipv4 和 ipv6 测试
 
 >如果没有安装 docker 先安装
 ```
 bash docker-ce.sh
 ```
+
 ## 修改配置文件
->把 default.conf 中的
+>把 `default.conf` 中的
 `server_name  ipv4.site.com;` 和 `server_name  ipv6.site.com;` 替换为你的域名
 
 >把 `ipv4.site.com` 解析(A记录)到 服务器的 `ipv4` 地址
