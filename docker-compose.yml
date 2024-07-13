@@ -12,3 +12,10 @@ services:
         stdin_open: true
         # 相当于 docker run -t
         tty: true
+        networks:
+          - ipv6test
+
+networks:
+  ipv6test:
+    name: diynet6
+    driver: bridge
