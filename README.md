@@ -3,7 +3,7 @@
 ## 把项目下载到本地并进入目录
 ```
 apt install -y git && \
-git clone https://github.com/wenyamu/ipv6_test.git && \
+git clone https://github.com/wenyamu/ipv6_test.git /root/ipv6_test && \
 cd ipv6_test
 ```
 
