@@ -4,8 +4,7 @@
 ```
 apt install -y git && \
 git clone https://github.com/wenyamu/ipv6_test.git && \
-cd ipv6_test && \
-bash docker-ce.sh
+cd ipv6_test
 ```
 
 ## 修改配置文件
@@ -20,7 +19,7 @@ bash docker-ce.sh
 ## 部署
 >如果没有安装 `docker` 先安装 `bash docker-ce.sh`
 ```
-cd ipv6_test
+bash docker-ce.sh && \
 docker compose up -d
 ```
 
