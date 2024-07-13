@@ -38,3 +38,27 @@ curl: (7) Couldn't connect to server
 root@localhost:~# 
 ```
 
+## 题外话 webssh ipv6 测试
+```
+mkdir -p /root/websshtest/ && \
+iptables -I INPUT -p tcp --dport 8888 -j ACCEPT && \
+iptables -I INPUT -p udp --dport 8888 -j ACCEPT && \
+ip6tables -I INPUT -p tcp --dport 8888 -j ACCEPT && \
+ip6tables -I INPUT -p udp --dport 8888 -j ACCEPT && \
+cat > /root/websshtest/docker-compose.yml << EOF
+services:
+    ywsj_webssh:
+        container_name: websshtest
+        ports:
+            - '8888:8888'
+        environment:
+            - TZ=Asia/Shanghai
+        restart: always
+        hostname: webssh
+        image: lihaixin/webssh
+EOF
+cd /root/websshtest/ && \
+docker compose up -d
+```
+
+
