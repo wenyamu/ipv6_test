@@ -4,7 +4,7 @@
 ```
 apt install -y git && \
 git clone https://github.com/wenyamu/ipv6_test.git /root/ipv6_test && \
-cd ipv6_test
+cd /root/ipv6_test
 ```
 
 ## 修改配置文件
