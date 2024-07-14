@@ -9,5 +9,3 @@ ADD default.conf /etc/nginx/conf.d
 EXPOSE 80 443
 
 CMD ["nginx", "-g", "daemon off;"]
-#使用 ENTRYPOINT 无法启动容器
-#ENTRYPOINT ["/docker-entrypoint.sh"]
