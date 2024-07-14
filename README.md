@@ -32,8 +32,3 @@ root@localhost:~# curl ipv6.890.im
 curl: (7) Couldn't connect to server
 root@localhost:~# 
 ```
-
-## 有个问题很奇怪
-如果 `ipv4.890.im` 能访问 返回的是 `ipv4.html` 里面的内容，这能理解
-但是，当 `ipv6.890.im` 能访问 返回的还是 `ipv4.html` 里面的内容，这就不能理解了
-配置文件要怎么写呢，头疼。
