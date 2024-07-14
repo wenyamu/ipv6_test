@@ -24,11 +24,6 @@ docker compose up -d
 ```
 
 ## 总结
->如果你有`ipv4`环境, 在浏览器中访问 `ipv4.site.com` ，页面出现 `This is ipv4 site.`
->
->如果你有`ipv6`环境, 在浏览器中访问 `ipv6.site.com` ，页面出现 `This is ipv6 site.`
-
-或者在终端中使用`curl`
 > 在没有 `ipv6` 的服务器中是这样的
 ```
 root@localhost:~# curl ipv4.890.im
@@ -38,30 +33,7 @@ curl: (7) Couldn't connect to server
 root@localhost:~# 
 ```
 
-## 题外话 webssh ipv6 测试
-```
-mkdir -p /root/websshtest/ && \
-iptables -I INPUT -p tcp --dport 8888 -j ACCEPT && \
-iptables -I INPUT -p udp --dport 8888 -j ACCEPT && \
-ip6tables -I INPUT -p tcp --dport 8888 -j ACCEPT && \
-ip6tables -I INPUT -p udp --dport 8888 -j ACCEPT && \
-cat > /root/websshtest/docker-compose.yml << EOF
-services:
-    ywsj_webssh:
-        container_name: websshtest
-        ports:
-            - '8888:8888'
-        environment:
-            - TZ=Asia/Shanghai
-        restart: always
-        hostname: webssh
-        image: lihaixin/webssh
-EOF
-cd /root/websshtest/ && \
-docker compose up -d
-```
-
 ## 有个问题很奇怪
-如果 `ipv4.890.im` 能访问 返回的是 `ipv4.html` 的内容，这能理解
-但是，当 `ipv6.890.im` 能访问 返回的还是 `ipv4.html` 的内容，这就不能理解了
+如果 `ipv4.890.im` 能访问 返回的是 `ipv4.html` 里面的内容，这能理解
+但是，当 `ipv6.890.im` 能访问 返回的还是 `ipv4.html` 里面的内容，这就不能理解了
 配置文件要怎么写呢，头疼。
