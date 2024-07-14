@@ -20,4 +20,5 @@ services:
 networks:
   ipv6test:
     name: diynet6
+    enable_ipv6: true
     driver: bridge
