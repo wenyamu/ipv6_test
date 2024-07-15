@@ -3,8 +3,10 @@
 ## 把项目下载到本地并进入目录
 ```
 apt install -y git && \
+curl -L https://github.com/wenyamu/docker/releases/download/v1.0.0/docker-ce.sh | bash && \
 git clone https://github.com/wenyamu/ipv6_test.git /root/ipv6_test && \
-cd /root/ipv6_test
+cd /root/ipv6_test && \
+docker compose up -d
 ```
 
 ## 修改配置文件
@@ -15,13 +17,6 @@ cd /root/ipv6_test
 >把 `ipv4.site.com` 解析(A记录)到 服务器的 `ipv4` 地址
 
 >把 `ipv6.site.com` 解析(AAAA记录)到 服务器的 `ipv6` 地址
-
-## 部署
->如果没有安装 `docker` 先安装 `bash docker-ce.sh`
-```
-bash docker-ce.sh && \
-docker compose up -d
-```
 
 ## 总结
 > 在没有 `ipv6` 的服务器中是这样的
