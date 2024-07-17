@@ -21,9 +21,9 @@ docker compose up -d
 ## 总结
 > 在没有 `ipv6` 的服务器中是这样的
 ```
-root@localhost:~# curl ipv4.890.im
+root@localhost:~# curl ipv4.site.com
 This is ipv4 site.
-root@localhost:~# curl ipv6.890.im
+root@localhost:~# curl ipv6.site.com
 curl: (7) Couldn't connect to server
 root@localhost:~# 
 ```
